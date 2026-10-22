@@ -223,7 +223,7 @@ body {
     transform: scale(0.99);
 }
 
-/* ===== Create Account ===== */
+/* Create Account */
 .account {
     margin-top: 24px;
     text-align: center;
@@ -260,7 +260,7 @@ body {
 .header {
     width: 100%;
     min-height: 80px;
-    padding: 0 max(5%, calc((100% - 1080px) / 2));
+    padding: 0 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -420,5 +420,4 @@ body {
     color: #87918b;
     font-size: 14px;
 }
-
 
