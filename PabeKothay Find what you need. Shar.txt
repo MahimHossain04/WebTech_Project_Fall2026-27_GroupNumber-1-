@@ -1,8 +1,0 @@
-PabeKothay: Find what you need. Share what you have.
-
-Group	Name		ID
-1	RIKTI AHMED	24-56548-1	
-	FABLIHA TAHSIN	24-56556-1		
-	MAHIM HOSSAIN	24-56577-1	
-	
-				

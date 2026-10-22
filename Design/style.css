@@ -1,0 +1,228 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #202b27;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 16px 18px;
+}
+
+/* ===== Main Login Card ===== */
+.login-container {
+    width: 100%;
+    max-width: 470px;
+    min-height: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid #edf1ee;
+}
+
+/* ===== Top Design Section ===== */
+.logo-section {
+    background: #e4f5ef;
+    min-height: 0;
+    flex-shrink: 1;
+    padding: 12px 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.site-logo {
+    width: 110px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.logo-section h1 {
+    font-size: 27px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    margin-bottom: 13px;
+    color: #183c30;
+}
+
+.brand-description {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #53665c;
+    margin-bottom: 22px;
+}
+
+.feature-card {
+    padding: 17px 18px;
+    border: 1px solid rgba(22, 133, 107, 0.20);
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.feature-card h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+    color: #183c30;
+}
+
+.feature-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #53665c;
+}
+
+.logo-section p {
+    font-size: 12px;
+}
+
+/* ===== Login Form ===== */
+.login-content {
+    flex: 1;
+    min-height: 0;
+    padding: 20px 26px;
+    overflow-y: auto;
+}
+
+.login-content h2 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #171d1a;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 13px;
+    color: #737d78;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* ===== Input Fields ===== */
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #34423a;
+}
+
+.input-box {
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid #dce4df;
+    border-radius: 11px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-box:focus-within {
+    border-color: #16856b;
+    box-shadow: 0 0 0 3px rgba(22, 133, 107, 0.10);
+}
+
+.input-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    color: #202b27;
+}
+
+.input-box input::placeholder {
+    color: #9aa39d;
+}
+
+
+.signup-text a {
+    color: #16856b;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.signup-text a:hover {
+    color: #106b56;
+    text-decoration: underline;
+}
+
+/* ===== Login Button ===== */
+.login-button {
+    width: 100%;
+    min-height: 48px;
+    border: none;
+    border-radius: 8px;
+    background: #16856b;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.login-button:hover {
+    background: #106b56;
+}
+
+.login-button:active {
+    transform: scale(0.99);
+}
+
+/* ===== Create Account ===== */
+.signup-text {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 13px;
+    color: #737d78;
+    line-height: 1.6;
+}
+
+/* ===== Footer ===== */
+.page-footer {
+    margin-top: 18px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #87918b;
+    text-align: center;
+}
