@@ -19,6 +19,7 @@ body {
 }
 
 .page-wrapper {
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -30,11 +31,11 @@ body {
 /* ===== Main Login Card ===== */
 .login-container {
     width: 100%;
-    max-width: 470px;
+    max-width: 980px;
     min-height: 0;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background: #ffffff;
     border-radius: 20px;
     overflow: hidden;
@@ -45,16 +46,19 @@ body {
 /* ===== Top Design Section ===== */
 .logo-section {
     background: #e4f5ef;
+    flex: 0 0 42%;
     min-height: 0;
-    flex-shrink: 1;
-    padding: 12px 24px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .brand {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
 
 .site-logo {
@@ -107,7 +111,7 @@ body {
 
 /* ===== Login Form ===== */
 .login-content {
-    flex: 1;
+    flex: 1 1 58%;
     min-height: 0;
     padding: 20px 26px;
     overflow-y: auto;
@@ -169,6 +173,16 @@ body {
     color: #202b27;
 }
 
+.input-box select {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    color: #202b27;
+}
+
 .input-box input::placeholder {
     color: #9aa39d;
 }
@@ -198,7 +212,7 @@ body {
     font-size: 17px;
     font-weight: 700;
     cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
+     margin-top: 10px;
 }
 
 .login-button:hover {
@@ -226,3 +240,4 @@ body {
     color: #87918b;
     text-align: center;
 }
+
