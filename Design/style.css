@@ -246,7 +246,7 @@ body {
     display: block;
     min-height: 100vh;
     padding: 0;
-    background: #ffffff;
+    background: #f3f7f5;
     color: #242a28;
 }
 
@@ -331,7 +331,7 @@ body {
     max-width: 900px;
     margin-bottom: 22px;
     color: #14745f;
-    font-size: clamp(38px, 5vw, 58px);
+    font-size: 48px;
     font-weight: 700;
     line-height: 1.08;
 }
@@ -379,7 +379,7 @@ body {
     max-width: 1040px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 44px;
     text-align: left;
 }
@@ -389,6 +389,7 @@ body {
     padding: 26px 27px;
     border-top: 4px solid #14745f;
     background: #ffffff;
+    border-radius: 10px;
 }
 
 .card:nth-child(2) {
