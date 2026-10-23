@@ -7,17 +7,17 @@
         <link rel="stylesheet" href="../Design/style.css" />
     </head>
     <body class="dashboard-body">
-        <header class="header">
+        <header class="header" id="dashboard-header">
             <a class="logo-area" href="index.html">
                 <img class="brand-icon" src="../images/pabekothay_icon_only.svg" alt="PabeKothay logo"/>
-                <h3>PabeKothay</h3>
+                <span class="brand-name">PabeKothay</span>
             </a>
             <p class="student-label">Student</p>
         </header>
 
-        <div class="dashboard-layout">
-            <div class="sidebar">
-                <nav>
+        <div class="dashboard-layout" id="dashboard-layout">
+            <aside class="sidebar" id="dashboard-sidebar">
+                <nav aria-label="Main navigation">
                     <a href="#">Home / Browse</a>
                     <a href="#">Item Details</a>
                     <a href="#">Cart / Request</a>
@@ -26,28 +26,28 @@
                     <a href="#">Settings</a>
                     <a href="index.html" class="logout-button">Logout</a>
                 </nav>
-            </div>
+            </aside>
 
-            <div class="content">
+            <div class="content" id="dashboard-content">
                 <h1>4. My Requests</h1>
                 <p>Find what you need, share what you have</p>
 
-                <div class="request-tabs">
+                <nav class="request-tabs" aria-label="Filter requests by status">
                     <a href="#" class="active">All</a>
                     <a href="#">Pending</a>
                     <a href="#">Approved</a>
                     <a href="#">Rejected</a>
                     <a href="#">Completed</a>
-                </div>
+                </nav>
 
-                <table class="request-table">
+                <table class="request-table" aria-label="Your requests">
                     <thead>
                         <tr>
-                            <th>Item</th>
-                            <th>Type</th>
-                            <th>Date</th>
-                            <th>Status</th>
-                            <th>Action</th>
+                            <th scope="col">Item</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -85,10 +85,5 @@
             
         </div>
          <footer class="small-footer">© 2026 PabeKothay. All rights reserved.</footer>
-    </div>
     </body>
 </html>
-
-
-
-

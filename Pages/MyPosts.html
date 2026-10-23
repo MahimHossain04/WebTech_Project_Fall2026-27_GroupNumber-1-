@@ -7,19 +7,19 @@
         <link rel="stylesheet" href="../Design/style.css">
     </head>
     <body class="dashboard-body">
-        <header class="header">
+        <header class="header" id="dashboard-header">
             <a class="logo-area" href="index.html">
                 <img class="brand-icon" src="../images/pabekothay_icon_only.svg" alt="PabeKothay logo">
-                <h3>PabeKothay</h3>
+                <span class="brand-name">PabeKothay</span>
             </a>
 
 
             <p class="student-label">Student</p>
         </header>
 
-        <div class="dashboard-layout">
-            <div class="sidebar">
-                <nav>
+        <div class="dashboard-layout" id="dashboard-layout">
+            <aside class="sidebar" id="dashboard-sidebar">
+                <nav aria-label="Main navigation">
                     <a href="#">Home / Browse</a>
                     <a href="#">Item Details</a>
                     <a href="#">Cart / Request</a>
@@ -28,55 +28,54 @@
                     <a href="#">Settings</a>
                     <a href="index.html" class="logout-button">Logout</a>
                 </nav>
-            </div>
+            </aside>
 
-            <div class="content">
-               <h1>5. My Posts / Create Post</h1>
-            <p>Find what you need, share what you have</p>
+            <div class="content" id="dashboard-content">
+                <h1>5. My Posts / Create Post</h1>
+                <p>Find what you need, share what you have</p>
 
-            <div class="listing-heading">
-    <h2>Your listings</h2>
-    <button type="button">+ Add Post</button>
-</div>
-<div class="listing-cards">
-    <div class="listing-card">
-        <img class="listing-image" src="../images/KeyB.JPG" alt="Keyboard">
-        <h3>Keyboard</h3>
-        <p class="listing-price">Tk 2,000</p>
-        <p class="listing-status">Active</p>
-        <div class="listing-actions">
-            <button type="button">Edit</button>
-            <button type="button">Delete</button>
-        </div>
-    </div>
+                <section aria-labelledby="listing-title">
+                    <header class="listing-heading">
+                        <h2 id="listing-title">Your listings</h2>
+                        <button type="button">+ Add Post</button>
+                    </header>
+                    <div class="listing-cards">
+                        <div class="listing-card">
+                            <img class="listing-image" src="../images/KeyB.JPG" alt="Keyboard">
+                            <h3>Keyboard</h3>
+                            <p class="listing-price">Tk 2,000</p>
+                            <p class="listing-status">Active</p>
+                            <div class="listing-actions">
+                                <button type="button">Edit</button>
+                                <button type="button">Delete</button>
+                            </div>
+                        </div>
 
-    <div class="listing-card">
-        <img class="listing-image" src="../images/RM.JPG" alt="RM Sheets">
-        <h3>RM Sheets</h3>
-        <p class="listing-price">Tk 100</p>
-        <p class="listing-status">Active</p>
-        <div class="listing-actions">
-            <button type="button">Edit</button>
-            <button type="button">Delete</button>
-        </div>
-    </div>
+                        <div class="listing-card">
+                            <img class="listing-image" src="../images/RM.JPG" alt="RM Sheets">
+                            <h3>RM Sheets</h3>
+                            <p class="listing-price">Tk 100</p>
+                            <p class="listing-status">Active</p>
+                            <div class="listing-actions">
+                                <button type="button">Edit</button>
+                                <button type="button">Delete</button>
+                            </div>
+                        </div>
 
-    <div class="listing-card">
-        <img class="listing-image" src="../images/Calc.JPG" alt="Calculator">
-        <h3>Calculator</h3>
-        <p class="listing-price">Tk 650</p>
-        <p class="listing-status inactive">Inactive</p>
-        <div class="listing-actions">
-            <button type="button">Edit</button>
-            <button type="button">Delete</button>
-        </div>
-    </div>
-</div>
+                        <div class="listing-card">
+                            <img class="listing-image" src="../images/Calc.JPG" alt="Calculator">
+                            <h3>Calculator</h3>
+                            <p class="listing-price">Tk 650</p>
+                            <p class="listing-status inactive">Inactive</p>
+                            <div class="listing-actions">
+                                <button type="button">Edit</button>
+                                <button type="button">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
         <footer class="small-footer">© 2026 PabeKothay. All rights reserved.</footer>
     </body>
 </html>
-
-
-
