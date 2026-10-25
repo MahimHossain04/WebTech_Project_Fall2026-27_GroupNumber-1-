@@ -1,4 +1,4 @@
-# PabeKothay 🎓
+# PabeKothay 🤝
 
 **A University Student Marketplace for Buying & Exchanging Items**
 
