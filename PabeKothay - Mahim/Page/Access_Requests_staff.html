@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Requests | PabeKothay</title>
+    <link rel="stylesheet" href="../Design/style.css">
+    <script src="../Script/Access_Request.js" defer></script>
+</head>
+<body class="dashboardPage accessRequestsPage">
+    <header class="topBar">
+        <a class="brand" href="../../index.html">
+            <img class="brandLogo" src="../icons/pabekothay_icon_only.svg" alt="">
+            <p class="brandName">PabeKothay</p>
+        </a>
+        <p class="portalName">Customer Support Officer Portal</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="../Page/Dashboard_staff.html">Dashboard</a>
+        <a href="../Page/Marketplace_Management_staff.html">Marketplace Management</a>
+        <a href="../Page/Complaints_Issues_staff.html">Complaints &amp; Issues</a>
+        <a class="selected" href="../Page/Access_Requests_staff.html">Access Requests</a>
+        <a class="logoutButton" href="../Page/Login_Staff.html">Log out</a>
+    </nav>
+
+    <div>
+        <h1>Access Requests</h1>
+        <p>Request a staff account or permission change. An Admin must approve requests before they take effect.</p>
+
+        <section class="activityTable">
+            <h2 id="requestHeading">Submit a request</h2>
+            <form onsubmit="return validate_access_request();" onreset="clear_access_request_errors();">
+                <fieldset>
+                    <legend>Request details</legend>
+                    <div>
+                        <label for="requestType">Request type</label><br>
+                        <select id="requestType" name="request_type">
+                            <option value="" selected disabled>Select a request</option>
+                            <option value="new-account">New staff account</option>
+                            <option value="permission-change">Permission change</option>
+                            <option value="deactivation">Deactivate staff account</option>
+                        </select>
+                        <p class="fieldError" id="requestTypeError"></p>
+                    </div>
+                    <div>
+                        <label for="staffIdentifier">Staff name or work email</label><br>
+                        <input type="text" id="staffIdentifier" name="staff_identifier" >
+                        <p class="fieldError" id="staffIdentifierError"></p>
+                    </div>
+                    <div>
+                        <label for="requestReason">Reason for request</label><br>
+                        <textarea id="requestReason" name="reason" rows="4"></textarea>
+                        <p class="fieldError" id="requestReasonError"></p>
+                    </div>
+                    <button type="submit">Submit for Admin approval</button>
+                    <button type="reset" class="accessResetButton">Reset</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section class="activityTable">
+            <h2 id="myRequestsHeading">My requests</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Request</th>
+                        <th scope="col">Staff</th>
+                        <th scope="col">Submitted</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Permission change</td>
+                        <td>Example staff</td>
+                        <td>—</td>
+                        <td>No request submitted</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer class="pageFooter">
+        <p>&copy; 2026 PabeKothay. All rights reserved.</p>
+        <p>Find what you need, share what you have.</p>
+    </footer>
+</body>
+</html>

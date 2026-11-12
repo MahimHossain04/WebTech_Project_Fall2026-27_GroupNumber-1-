@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaints &amp; Issues | PabeKothay</title>
+    <link rel="stylesheet" href="../Design/style.css">
+    <script src="../Script/Complaints_Issues.js" defer></script>
+</head>
+<body class="dashboardPage">
+    <header class="topBar">
+        <a class="brand" href="../../index.html">
+            <img class="brandLogo" src="../icons/pabekothay_icon_only.svg" alt="">
+            <p class="brandName">PabeKothay</p>
+        </a>
+        <p class="portalName">Customer Support Officer Portal</p>
+    </header>
+
+    <nav>
+        <a href="../Page/Dashboard_staff.html">Dashboard</a>
+        <a href="../Page/Marketplace_Management_staff.html">Marketplace Management</a>
+        <a class="selected" href="../Page/Complaints_Issues_staff.html">Complaints &amp; Issues</a>
+        <a href="../Page/Access_Requests_staff.html">Access Requests</a>
+        <a class="logoutButton" href="../Page/Login_Staff.html">Log out</a>
+    </nav>
+
+    <div>
+        <h1>Complaints &amp; Issues</h1>
+        <p>Review and manage support complaints from students.</p>
+
+        <div id="activity" class="activityTable">
+            <table>
+                <tr>
+                    <th>Complaint</th>
+                    <th>Student</th>
+                    <th>Issue</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                    <th>Update</th>
+                </tr>
+                <tr>
+                    <td>Wrong item received</td>
+                    <td>Mahim</td>
+                    <td>Item did not match the post</td>
+                    <td>
+                        <select id="complaintStatus1" name="status">
+                            <option value="" selected>Select status</option>
+                            <option>Open</option>
+                            <option>In Progress</option>
+                            <option>Resolved</option>
+                        </select><p class="fieldError" id="complaintStatusError1"></p>
+                    </td>
+                    <td>Today</td>
+                    <td>
+                        <select id="complaintAction1" name="action">
+                            <option value="" selected>Select action</option>
+                            <option>Review complaint</option>
+                            <option>Contact student</option>
+                            <option>Close complaint</option>
+                        </select><p class="fieldError" id="complaintActionError1"></p>
+                    </td>
+                    <td>
+                        <button type="button" onclick="validate_complaints1()">Save</button>
+                        <button type="button" class="resetButton" onclick="reset_complaints1()">Reset</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Delivery delayed</td>
+                    <td>Rikti</td>
+                    <td>Item has not arrived</td>
+                    <td>
+                        <select id="complaintStatus2" name="status">
+                            <option value="" selected>Select status</option>
+                            <option>Open</option>
+                            <option>In Progress</option>
+                            <option>Resolved</option>
+                        </select><p class="fieldError" id="complaintStatusError2"></p>
+                    </td>
+                    <td>Yesterday</td>
+                    <td>
+                        <select id="complaintAction2" name="action">
+                            <option value="" selected>Select action</option>
+                            <option>Review complaint</option>
+                            <option>Contact student</option>
+                            <option>Close complaint</option>
+                        </select><p class="fieldError" id="complaintActionError2"></p>
+                    </td>
+                    <td>
+                        <button type="button" onclick="validate_complaints2()">Save</button>
+                        <button type="button" class="resetButton" onclick="reset_complaints2()">Reset</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Payment issue</td>
+                    <td>Fabliha</td>
+                    <td>Payment confirmation missing</td>
+                    <td>
+                        <select id="complaintStatus3" name="status">
+                            <option value="" selected>Select status</option>
+                            <option>Open</option>
+                            <option>In Progress</option>
+                            <option>Resolved</option>
+                        </select><p class="fieldError" id="complaintStatusError3"></p>
+                    </td>
+                    <td>Yesterday</td>
+                    <td>
+                        <select id="complaintAction3" name="action">
+                            <option value="" selected>Select action</option>
+                            <option>Review complaint</option>
+                            <option>Contact student</option>
+                            <option>Close complaint</option>
+                        </select><p class="fieldError" id="complaintActionError3"></p>
+                    </td>
+                    <td>
+                        <button type="button" onclick="validate_complaints3()">Save</button>
+                        <button type="button" class="resetButton" onclick="reset_complaints3()">Reset</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer class="pageFooter">
+        <p>&copy; 2026 PabeKothay. All rights reserved.</p>
+        <p>Find what you need, share what you have.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support Officer Login | PabeKothay</title>
+    <link rel="stylesheet" href="../Design/style.css">
+    <script src="../Script/script.js"></script>
+</head>
+<body class="page">
+    <div class="pageContainer">
+        <header class="topBar">
+            <a class="brand" href="../../index.html">
+                <img class="brandLogo" src="../icons/pabekothay_icon_only.svg" alt="">
+                <p class="brandName">PabeKothay</p>
+            </a>
+            <p class="portalName">Customer Support Officer Portal</p>
+        </header>
+
+        <div class="registerIntro">
+            <h1>Customer Support Officer Login</h1>
+            <p>Sign in with your work email to access your support account.</p>
+        </div>
+
+        <div class="registerBox loginBox">
+            <h2>Log in to your account</h2>
+
+            <form class="registerForm loginForm" onsubmit="return validate_login();">
+                <fieldset class="registerSection">
+                    <legend>Account Login</legend>
+                <div class="formField">
+                    <label for="workEmail">Official work email</label>
+                    <input type="email" id="workEmail" name="work_email"
+                           autocomplete="email" required>
+                    <p class="fieldError" id="workEmailError"></p>
+                </div>
+
+                <div class="formField">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                    <p class="fieldError" id="passwordError"></p>
+                </div>
+                </fieldset>
+
+                <div class="formActions">
+                    <button class="button filledButton" type="submit">Log in</button>
+                    <a class="loginLink" href="Registration_Staff.html">Need an account? Register</a>
+                </div>
+            </form>
+        </div>
+
+        <footer class="pageFooter">
+            <p>© 2026 PabeKothay. All rights reserved.</p>
+            <p>Find what you need, share what you have.</p>
+        </footer>
+    </div>
+</body>
+</html>
+

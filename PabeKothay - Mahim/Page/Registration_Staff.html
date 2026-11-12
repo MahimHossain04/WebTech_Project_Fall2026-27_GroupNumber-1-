@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support Officer Registration | PabeKothay</title>
+    <link rel="stylesheet" href="../Design/style.css">
+    <script src="../Script/script.js"></script>
+</head>
+<body class="page">
+    <div class="pageContainer">
+        <header class="topBar">
+            <a class="brand" href="../../index.html">
+                <img class="brandLogo" src="../icons/pabekothay_icon_only.svg" alt="">
+                <p class="brandName">PabeKothay</p>
+            </a>
+            <p class="portalName">Customer Support Officer Portal</p>
+        </header>
+
+        <div class="registerIntro">
+            <h1>Customer Support Officer Registration</h1>
+            <p>Create your support staff account. Admin approval is required before you can sign in.</p>
+        </div>
+
+        <div class="registerBox">
+            <h2>Support Staff Access Request</h2>
+
+            <form class="registerForm" id="staffRegisterForm" onsubmit="collect_data(); return false;">
+                <fieldset class="registerSection">
+                    <legend>Personal Information</legend>
+                <div class="formField">
+                    <label for="firstName">First name</label>
+                    <input type="text" id="firstName" name="first_name">
+                    <p class="fieldError" id="firstNameError"></p>
+                </div>
+
+                <div class="formField">
+                    <label for="lastName">Last name</label>
+                    <input type="text" id="lastName" name="last_name">
+                    <p class="fieldError" id="lastNameError"></p>
+                </div>
+
+                <div class="formField">
+                    <label for="workEmail">Official work email</label>
+                    <input type="email" id="workEmail" name="work_email">
+                    <p class="fieldError" id="workEmailError"></p>
+                </div>
+
+                <div class="formField">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone">
+                    <p class="fieldError" id="phoneError"></p>
+                </div>
+
+                <div class="formField choiceField">
+                    <label>Gender</label>
+                    <div class="choiceOptions">
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="other"> Other</label>
+                        <label><input type="radio" name="gender" value="prefer-not-to-say"> Prefer not to say</label>
+                    </div>
+                    <p class="fieldError" id="genderError"></p>
+                </div>
+                </fieldset>
+
+                <fieldset class="registerSection">
+                    <legend>Support Preferences</legend>
+                <div class="formField choiceField">
+                    <label>Preferred support area</label>
+                    <div class="choiceOptions">
+                        <label><input type="checkbox" name="doctortype" value="customer-complaints"> Customer complaints</label>
+                        <label><input type="checkbox" name="doctortype" value="listing-review"> Marketplace listing review</label>
+                        <label><input type="checkbox" name="doctortype" value="delivery-support"> Delivery support</label>
+                        <label><input type="checkbox" name="doctortype" value="general-support"> General support</label>
+                    </div>
+                    <p class="fieldError" id="supportAreaError"></p>
+                </div>
+                </fieldset>
+
+                <fieldset class="registerSection">
+                    <legend>Account Security</legend>
+
+                <div class="formField">
+                    <label for="password">Create password</label>
+                    <input type="password" id="password" name="password">
+                    <p class="fieldError" id="passwordError"></p>
+                </div>
+
+                <div class="formField">
+                    <label for="confirmPassword">Confirm password</label>
+                    <input type="password" id="confirmPassword" name="confirm_password">
+                    <p class="fieldError" id="confirmPasswordError"></p>
+                </div>
+
+                </fieldset>
+
+                <div class="formActions">
+                    <button class="button filledButton" type="submit">
+                        Create Account
+                    </button>
+                    <a class="loginLink" href="../Page/Login_Staff.html">Already have an account? Log in</a>
+                </div>
+            </form>
+        </div>
+
+        <footer class="pageFooter">
+            <p>© 2026 PabeKothay. All rights reserved.</p>
+            <p>Find what you need, share what you have.</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
+
