@@ -9,7 +9,7 @@
 </head>
 <body class="dashboardPage marketplacePage">
     <header class="topBar">
-        <a class="brand" href="../index.html">
+        <a class="brand" href="../../index.html">
             <img class="brandLogo" src="../icons/pabekothay_icon_only.svg" alt="">
             <p class="brandName">PabeKothay</p>
         </a>
@@ -24,27 +24,27 @@
         <a class="logoutButton" href="../Page/Login_Staff.html">Log out</a>
     </nav>
 
-    <main class="marketplaceMain">
+    <div>
         <h1>Marketplace Management</h1>
         <p>Review reported posts and manage student buy and exchange requests.</p>
 
-        <div id="activity" class="activityTable">
-            <div class="sectionHeading">
+        <section id="activity" class="activityTable">
+            <header class="sectionHeading">
                 <h2>Reported Posts</h2>
-                <div class="totalBadge">Total: 3 Posts</div>
-            </div>
-            <div class="marketplaceGrid">
-                <div class="marketCard">
-                    <div class="cardDetails">
+                <p class="totalBadge">Total: 3 Posts</p>
+            </header>
+
+                <section class="marketCard">
+
                         <img class="itemImage" src="../images/biology-book.jpg" alt="Used Biology Book">
                         <div class="itemInfo">
                             <h3>Used Biology Book</h3>
-                            <div class="categoryBadge">Books</div>
+                            <p class="categoryBadge">Books</p>
                             <p>Reported by: Mahin</p>
                             <p>Reason: Misleading description</p>
                         </div>
-                    </div>
-                    <div class="cardControls">
+
+                    <form class="cardControls">
                         <label>Status
                         <select id="reportStatus1" name="status">
                             <option value="">Select status</option>
@@ -63,26 +63,26 @@
                         </select>
                         <p class="fieldError" id="reportActionError1"></p>
                         </label>
-                        <div class="updateControls">
-                            <div class="updateLabel">Update</div>
+
+                            <p class="updateLabel">Update</p>
                             <div>
                                 <button type="button" onclick="validate_report1()">Save</button>
                                 <button type="button" class="resetButton" onclick="reset_report1()">Reset</button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="marketCard">
-                    <div class="cardDetails">
+
+                    </form>
+                </section>
+                <section class="marketCard">
+
                         <img class="itemImage" src="../images/calculator.jpg" alt="Scientific Calculator">
                         <div class="itemInfo">
                             <h3>Scientific Calculator</h3>
-                            <div class="categoryBadge">Electronics</div>
+                            <p class="categoryBadge">Electronics</p>
                             <p>Reported by: Fabiha</p>
                             <p>Reason: Wrong price</p>
                         </div>
-                    </div>
-                    <div class="cardControls">
+
+                    <form class="cardControls">
                         <label>Status
                         <select id="reportStatus2" name="status">
                             <option value="" selected>Select status</option>
@@ -101,26 +101,26 @@
                         </select>
                         <p class="fieldError" id="reportActionError2"></p>
                         </label>
-                        <div class="updateControls">
-                            <div class="updateLabel">Update</div>
+
+                            <p class="updateLabel">Update</p>
                             <div>
                                 <button type="button" onclick="validate_report2()">Save</button>
                                 <button type="button" class="resetButton" onclick="reset_report2()">Reset</button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="marketCard">
-                    <div class="cardDetails">
+
+                    </form>
+                </section>
+                <section class="marketCard">
+
                         <img class="itemImage" src="../images/study-desk.jpg" alt="Study Desk">
                         <div class="itemInfo">
                             <h3>Study Desk</h3>
-                            <div class="categoryBadge">Furniture</div>
-                            <p>Reported by: Hrid</p>
+                            <p class="categoryBadge">Furniture</p>
+                            <p>Reported by: Rikti</p>
                             <p>Reason: Post is no longer available</p>
                         </div>
-                    </div>
-                    <div class="cardControls">
+
+                    <form class="cardControls">
                         <label>Status
                         <select id="reportStatus3" name="status">
                             <option value="" selected>Select status</option>
@@ -139,36 +139,36 @@
                         </select>
                         <p class="fieldError" id="reportActionError3"></p>
                         </label>
-                        <div class="updateControls">
-                            <div class="updateLabel">Update</div>
+
+                            <p class="updateLabel">Update</p>
                             <div>
                                 <button type="button" onclick="validate_report3()">Save</button>
                                 <button type="button" class="resetButton" onclick="reset_report3()">Reset</button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div id="exchangeRequests" class="activityTable">
-            <div class="sectionHeading">
+                    </form>
+                </section>
+
+        </section>
+
+        <section id="exchangeRequests" class="activityTable">
+            <header class="sectionHeading">
                 <h2>Exchange and Buy Requests</h2>
-                <div class="totalBadge">Total: 3 Requests</div>
-            </div>
-            <div class="requestGrid">
-                <div class="requestCard">
-                    <div class="requestDetails">
+                <p class="totalBadge">Total: 3 Requests</p>
+            </header>
+
+                <section class="requestCard">
+
                         <img src="../images/physics-notes.jpg" alt="Physics Notes">
                         <div>
                             <h3>Physics Notes</h3>
                             <p>Request type: Exchange</p>
-                            <p>Requested by: Rafi</p>
+                            <p>Requested by: Mahsan</p>
                             <p>Offer: Biology Notes</p>
                             <p>Request date: Yesterday</p>
                         </div>
-                    </div>
-                    <div class="requestControls">
+
+                    <form class="requestControls">
                         <label>Status
                             <select id="exchangeStatus1" name="exchange-status">
                                 <option value="" selected>Select status</option>
@@ -187,17 +187,17 @@
                             </select>
                             <p class="fieldError" id="exchangeActionError1"></p>
                         </label>
-                        <div class="requestButtons">
-                            <div class="updateLabel">Update</div>
+
+                            <p class="updateLabel">Update</p>
                             <div>
                                 <button type="button" onclick="validate_exchange1()">Save</button>
                                 <button type="button" class="resetButton" onclick="reset_exchange1()">Reset</button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="requestCard">
-                    <div class="requestDetails">
+
+                    </form>
+                </section>
+                <section class="requestCard">
+
                         <img src="../images/WirelessEarbuds.jpg" alt="Wireless Earbuds">
                         <div>
                             <h3>Wireless Earbuds</h3>
@@ -206,8 +206,8 @@
                             <p>Offer: Tk 1,200</p>
                             <p>Request date: Today</p>
                         </div>
-                    </div>
-                    <div class="requestControls">
+
+                    <form class="requestControls">
                         <label>Status
                             <select id="exchangeStatus2" name="exchange-status">
                                 <option value="" selected>Select status</option>
@@ -226,17 +226,17 @@
                             </select>
                             <p class="fieldError" id="exchangeActionError2"></p>
                         </label>
-                        <div class="requestButtons">
-                            <div class="updateLabel">Update</div>
+
+                            <p class="updateLabel">Update</p>
                             <div>
                                 <button type="button" onclick="validate_exchange2()">Save</button>
                                 <button type="button" class="resetButton" onclick="reset_exchange2()">Reset</button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="requestCard">
-                    <div class="requestDetails">
+
+                    </form>
+                </section>
+                <section class="requestCard">
+
                         <img src="../images/Cycle Helmet.jpg" alt="Cycle Helmet">
                         <div>
                             <h3>Cycle Helmet</h3>
@@ -245,8 +245,8 @@
                             <p>Offer: Sports Bag</p>
                             <p>Request date: 2 days ago</p>
                         </div>
-                    </div>
-                    <div class="requestControls">
+
+                    <form class="requestControls">
                         <label>Status
                             <select id="exchangeStatus3" name="exchange-status">
                                 <option value="" selected>Select status</option>
@@ -265,18 +265,18 @@
                             </select>
                             <p class="fieldError" id="exchangeActionError3"></p>
                         </label>
-                        <div class="requestButtons">
-                            <div class="updateLabel">Update</div>
+
+                            <p class="updateLabel">Update</p>
                             <div>
                                 <button type="button" onclick="validate_exchange3()">Save</button>
                                 <button type="button" class="resetButton" onclick="reset_exchange3()">Reset</button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+
+                    </form>
+                </section>
+
+        </section>
+    </div>
 
     <footer class="pageFooter">
         <p>&copy; 2026 PabeKothay. All rights reserved.</p>
