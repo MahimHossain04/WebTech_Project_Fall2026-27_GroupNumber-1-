@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-/* html {
-    height: 100%;
-} */
-
 body {
     min-height: 100%;
     margin: 0;
@@ -50,71 +46,6 @@ body {
     font-weight: 700;
 }
 
-.projectDescription {
-    max-width: 760px;
-    margin: auto auto 0;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.projectDescription p {
-    margin: 0;
-    color: #4b5563;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-.accountChoices {
-    max-width: 864px;
-    margin: 16px auto 0;
-    margin-bottom: auto;
-    text-align: center; 
-}
-
-.accountChoices > h1 {
-    margin: 0;
-    color: #08775e;
-    font-size: 32px;
-}
-
-.pageNote {
-    margin: 6px 0 44px;
-    color: #777777;
-    font-size: 14px;
-}
-
-.accountList {
-    max-width: 1000px;
-    margin: 42px auto 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 42px 48px;
-}
-.accountBox {
-    padding: 18px 20px;
-    border: 1px solid #d5e2dd;
-    border-top: 7px solid #08775e;
-    border-radius: 0 0 9px 9px;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.accountBox h2 {
-    margin: 0 0 8px;
-    font-size: 20px;
-}
-
-.accountBox p {
-    margin: 0 0 18px;
-    color: #777777;
-    font-size: 13px;
-}
-
-.accountButtons {
-    display: flex;
-    gap: 14px;
-}
-
 .button {
     flex: 1;
     padding: 10px 14px;
@@ -128,11 +59,6 @@ body {
 .filledButton {
     background-color: #08775e;
     color: #ffffff;
-}
-
-.emptyButton {
-    background-color: #ffffff;
-    color: #08775e;
 }
 
 .button:hover {
@@ -362,7 +288,7 @@ body {
 }
 
 .dashboardPage {
-    min-height: 100%;
+    min-height: 100vh;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
@@ -380,6 +306,7 @@ body {
 
 .dashboardPage nav {
     width: 250px;
+    min-height: calc(100vh - 130px);
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -558,10 +485,6 @@ body {
     background-color: white;
 }
 
-.dashboardPage #exchangeRequests {
-    margin-top: 24px;
-}
-
 .dashboardPage .activityTable h2 {
     padding: 12px;
     color: #08775e;
@@ -654,7 +577,7 @@ body {
 }
 
 /* Save button */
-.dashboardPage .activityTable button[type="button"]:not(.resetButton) {
+.dashboardPage .activityTable button {
     padding: 7px 12px;
     border: 1px solid #0f6e56;
     border-radius: 5px;
@@ -685,3 +608,157 @@ body {
     color: #b42318;
 }
 
+/* Marketplace Management */
+.marketplaceMain {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+}
+
+.sectionHeading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+body.marketplacePage .activityTable {
+    margin-bottom: 20px;
+    padding: 14px 12px 12px;
+}
+
+.sectionHeading h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+body.marketplacePage .sectionHeading h2 {
+    padding: 0;
+    color: #092e29;
+    font-size: 22px;
+}
+
+.totalBadge {
+    padding: 9px 16px;
+    border-radius: 20px;
+    background-color: #dfefed;
+    color: #075b49;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.marketplaceGrid,
+.requestGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.marketCard,
+.requestCard {
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #dce8e7;
+    border-radius: 14px;
+    background-color: #ffffff;
+}
+
+.cardDetails,
+.requestDetails {
+    min-height: 150px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 5px 7px 12px;
+}
+
+.itemImage,
+.requestDetails img {
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background-color: #e8efed;
+    object-fit: cover;
+}
+
+.itemInfo h3,
+.requestDetails h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.categoryBadge {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 6px 13px;
+    border-radius: 18px;
+    background-color: #e2f1ef;
+    color: #075b49;
+    font-size: 14px;
+}
+
+.itemInfo p,
+.requestDetails p {
+    margin: 5px 0;
+    color: #172331;
+    font-size: 14px;
+}
+
+.cardControls,
+.requestControls {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: end;
+    gap: 8px;
+    padding: 9px;
+    border-radius: 10px;
+    background-color: #f0f5f4;
+}
+
+.cardControls label,
+.requestControls label,
+.updateLabel {
+    color: #075b49;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.cardControls select,
+.requestControls select {
+    width: 100%;
+    height: 34px;
+    margin-top: 6px;
+    padding: 5px 8px;
+    border: 1px solid #c7d8d7;
+    border-radius: 7px;
+    background-color: #ffffff;
+}
+
+.updateControls > div,
+.requestButtons > div {
+    display: flex;
+    gap: 5px;
+    margin-top: 6px;
+}
+
+body.marketplacePage button {
+    padding: 8px 11px;
+    border: 1px solid #08775e;
+    border-radius: 6px;
+    background-color: #08775e;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+body.marketplacePage button.resetButton {
+    border-color: #c7d8d7;
+    background-color: #ffffff;
+    color: #17423b;
+}
+
+.marketplaceMain .fieldError {
+    margin: 3px 0 0;
+    color: #b42318;
+    font-size: 11px;
+}

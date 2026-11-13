@@ -7,217 +7,276 @@
     <link rel="stylesheet" href="../Design/style.css">
     <script src="../Script/Marketplace_Management.js" defer></script>
 </head>
-<body class="dashboardPage">
+<body class="dashboardPage marketplacePage">
     <header class="topBar">
-        <a class="brand" href="../../index.html">
+        <a class="brand" href="../index.html">
             <img class="brandLogo" src="../icons/pabekothay_icon_only.svg" alt="">
             <p class="brandName">PabeKothay</p>
         </a>
         <p class="portalName">Customer Support Officer Portal</p>
     </header>
 
-  <nav>
-    <a href="../Page/Dashboard_staff.html">Dashboard</a>
-    <a class="selected" href="../Page/Marketplace_Management_staff.html">Marketplace Management</a>
-    <a href="../Page/Complaints_Issues_staff.html">Complaints &amp; Issues</a>
-    <a href="../Page/Access_Requests_staff.html">Access Requests</a>
-    <a class="logoutButton" href="../Page/Login_Staff.html">Log out</a>
-</nav>
+    <nav>
+        <a href="../Page/Dashboard_staff.html">Dashboard</a>
+        <a class="selected" href="../Page/Marketplace_Management_staff.html">Marketplace Management</a>
+        <a href="../Page/Complaints_Issues_staff.html">Complaints &amp; Issues</a>
+        <a href="../Page/Access_Requests_staff.html">Access Requests</a>
+        <a class="logoutButton" href="../Page/Login_Staff.html">Log out</a>
+    </nav>
 
-    <div>
+    <main class="marketplaceMain">
         <h1>Marketplace Management</h1>
         <p>Review reported posts and manage student buy and exchange requests.</p>
 
         <div id="activity" class="activityTable">
-            <h2>Reported Posts</h2>
-            <table>
-                <tr>
-                    <th>Post</th>
-                    <th>Category</th>
-                    <th>Reported By</th>
-                    <th>Reason</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                    <th>Update</th>
-                </tr>
-                <tr>
-                    <td>Used Biology Book</td>
-                    <td>Books</td>
-                    <td>Mahim</td>
-                    <td>Misleading description</td>
-                    <td>
+            <div class="sectionHeading">
+                <h2>Reported Posts</h2>
+                <div class="totalBadge">Total: 3 Posts</div>
+            </div>
+            <div class="marketplaceGrid">
+                <div class="marketCard">
+                    <div class="cardDetails">
+                        <img class="itemImage" src="../images/biology-book.jpg" alt="Used Biology Book">
+                        <div class="itemInfo">
+                            <h3>Used Biology Book</h3>
+                            <div class="categoryBadge">Books</div>
+                            <p>Reported by: Mahin</p>
+                            <p>Reason: Misleading description</p>
+                        </div>
+                    </div>
+                    <div class="cardControls">
+                        <label>Status
                         <select id="reportStatus1" name="status">
                             <option value="">Select status</option>
                             <option>Pending</option>
                             <option>Reviewed</option>
                             <option>Rejected</option>
-                        </select><p class="fieldError" id="reportStatusError1"></p>
-                    </td>
-                    <td>
+                        </select>
+                        <p class="fieldError" id="reportStatusError1"></p>
+                        </label>
+                        <label>Action
                         <select id="reportAction1" name="action">
                             <option value="">Select action</option>
                             <option>Review post</option>
                             <option>Keep post</option>
                             <option>Remove post</option>
-                        </select><p class="fieldError" id="reportActionError1"></p>
-                    </td>
-                    <td>
-                        <button type="button" onclick="validate_report1()">Save</button>
-                        <button type="button" class="resetButton" onclick="reset_report1()">Reset</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Scientific Calculator</td>
-                    <td>Electronics</td>
-                    <td>Fabliha</td>
-                    <td>Wrong price</td>
-                    <td>
+                        </select>
+                        <p class="fieldError" id="reportActionError1"></p>
+                        </label>
+                        <div class="updateControls">
+                            <div class="updateLabel">Update</div>
+                            <div>
+                                <button type="button" onclick="validate_report1()">Save</button>
+                                <button type="button" class="resetButton" onclick="reset_report1()">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="marketCard">
+                    <div class="cardDetails">
+                        <img class="itemImage" src="../images/calculator.jpg" alt="Scientific Calculator">
+                        <div class="itemInfo">
+                            <h3>Scientific Calculator</h3>
+                            <div class="categoryBadge">Electronics</div>
+                            <p>Reported by: Fabiha</p>
+                            <p>Reason: Wrong price</p>
+                        </div>
+                    </div>
+                    <div class="cardControls">
+                        <label>Status
                         <select id="reportStatus2" name="status">
                             <option value="" selected>Select status</option>
                             <option>Pending</option>
                             <option>Reviewed</option>
                             <option>Rejected</option>
-                        </select><p class="fieldError" id="reportStatusError2"></p>
-                    </td>
-                    <td>
+                        </select>
+                        <p class="fieldError" id="reportStatusError2"></p>
+                        </label>
+                        <label>Action
                         <select id="reportAction2" name="action">
                             <option value="">Select action</option>
                             <option>Review post</option>
                             <option>Keep post</option>
                             <option>Remove post</option>
-                        </select><p class="fieldError" id="reportActionError2"></p>
-                    </td>
-                    <td>
-                        <button type="button" onclick="validate_report2()">Save</button>
-                        <button type="button" class="resetButton" onclick="reset_report2()">Reset</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Study Desk</td>
-                    <td>Furniture</td>
-                    <td>Rikti</td>
-                    <td>Post is no longer available</td>
-                    <td>
+                        </select>
+                        <p class="fieldError" id="reportActionError2"></p>
+                        </label>
+                        <div class="updateControls">
+                            <div class="updateLabel">Update</div>
+                            <div>
+                                <button type="button" onclick="validate_report2()">Save</button>
+                                <button type="button" class="resetButton" onclick="reset_report2()">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="marketCard">
+                    <div class="cardDetails">
+                        <img class="itemImage" src="../images/study-desk.jpg" alt="Study Desk">
+                        <div class="itemInfo">
+                            <h3>Study Desk</h3>
+                            <div class="categoryBadge">Furniture</div>
+                            <p>Reported by: Hrid</p>
+                            <p>Reason: Post is no longer available</p>
+                        </div>
+                    </div>
+                    <div class="cardControls">
+                        <label>Status
                         <select id="reportStatus3" name="status">
                             <option value="" selected>Select status</option>
                             <option>Pending</option>
                             <option>Reviewed</option>
                             <option>Rejected</option>
-                        </select><p class="fieldError" id="reportStatusError3"></p>
-                    </td>
-                    <td>
+                        </select>
+                        <p class="fieldError" id="reportStatusError3"></p>
+                        </label>
+                        <label>Action
                         <select id="reportAction3" name="action">
                             <option value="">Select action</option>
                             <option>Review post</option>
                             <option>Keep post</option>
                             <option>Remove post</option>
-                        </select><p class="fieldError" id="reportActionError3"></p>
-                    </td>
-                    <td>
-                        <button type="button" onclick="validate_report3()">Save</button>
-                        <button type="button" class="resetButton" onclick="reset_report3()">Reset</button>
-                    </td>
-                </tr>
-            </table>
+                        </select>
+                        <p class="fieldError" id="reportActionError3"></p>
+                        </label>
+                        <div class="updateControls">
+                            <div class="updateLabel">Update</div>
+                            <div>
+                                <button type="button" onclick="validate_report3()">Save</button>
+                                <button type="button" class="resetButton" onclick="reset_report3()">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div id="exchangeRequests" class="activityTable">
-            <h2>Exchange and Buy Requests</h2>
-            <table>
-                <tr>
-                    <th>Post</th>
-                    <th>Request Type</th>
-                    <th>Requested By</th>
-                    <th>Offer</th>
-                    <th>Request Date</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                    <th>Update</th>
-                </tr>
-                <tr>
-                    <td>Used Biology Book</td>
-                    <td>Exchange</td>
-                    <td>Tushar</td>
-                    <td>Chemistry Notes</td>
-                    <td>Today</td>
-                    <td>
-                        <select id="exchangeStatus1" name="exchange-status">
-                            <option value="" selected>Select status</option>
-                            <option>Pending</option>
-                            <option>Accepted</option>
-                            <option>Declined</option>
-                            <option>Completed</option>
-                        </select><p class="fieldError" id="exchangeStatusError1"></p>
-                    </td>
-                    <td>
-                        <select id="exchangeAction1" name="exchange-action">
-                            <option value="" selected>Select action</option>
-                            <option>View request</option>
-                            <option>Contact student</option>
-                        </select><p class="fieldError" id="exchangeActionError1"></p>
-                    </td>
-                    <td>
-                        <button type="button" onclick="validate_exchange1()">Save</button>
-                        <button type="button" class="resetButton" onclick="reset_exchange1()">Reset</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Scientific Calculator</td>
-                    <td>Buy</td>
-                    <td>Maheem</td>
-                    <td>Tk 800</td>
-                    <td>Today</td>
-                    <td>
-                        <select id="exchangeStatus2" name="exchange-status">
-                            <option value="" selected>Select status</option>
-                            <option>Pending</option>
-                            <option>Accepted</option>
-                            <option>Declined</option>
-                            <option>Completed</option>
-                        </select><p class="fieldError" id="exchangeStatusError2"></p>
-                    </td>
-                    <td>
-                        <select id="exchangeAction2" name="exchange-action">
-                            <option value="" selected>Select action</option>
-                            <option>View request</option>
-                            <option>Contact student</option>
-                        </select><p class="fieldError" id="exchangeActionError2"></p>
-                    </td>
-                    <td>
-                        <button type="button" onclick="validate_exchange2()">Save</button>
-                        <button type="button" class="resetButton" onclick="reset_exchange2()">Reset</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Study Desk</td>
-                    <td>Exchange</td>
-                    <td>Mahabubur</td>
-                    <td>Desk Chair</td>
-                    <td>Yesterday</td>
-                    <td>
-                        <select id="exchangeStatus3" name="exchange-status">
-                            <option value="" selected>Select status</option>
-                            <option>Pending</option>
-                            <option>Accepted</option>
-                            <option>Declined</option>
-                            <option>Completed</option>
-                        </select><p class="fieldError" id="exchangeStatusError3"></p>
-                    </td>
-                    <td>
-                        <select id="exchangeAction3" name="exchange-action">
-                            <option value="" selected>Select action</option>
-                            <option>View request</option>
-                            <option>Contact student</option>
-                        </select><p class="fieldError" id="exchangeActionError3"></p>
-                    </td>
-                    <td>
-                        <button type="button" onclick="validate_exchange3()">Save</button>
-                        <button type="button" class="resetButton" onclick="reset_exchange3()">Reset</button>
-                    </td>
-                </tr>
-            </table>
+            <div class="sectionHeading">
+                <h2>Exchange and Buy Requests</h2>
+                <div class="totalBadge">Total: 3 Requests</div>
+            </div>
+            <div class="requestGrid">
+                <div class="requestCard">
+                    <div class="requestDetails">
+                        <img src="../images/physics-notes.jpg" alt="Physics Notes">
+                        <div>
+                            <h3>Physics Notes</h3>
+                            <p>Request type: Exchange</p>
+                            <p>Requested by: Rafi</p>
+                            <p>Offer: Biology Notes</p>
+                            <p>Request date: Yesterday</p>
+                        </div>
+                    </div>
+                    <div class="requestControls">
+                        <label>Status
+                            <select id="exchangeStatus1" name="exchange-status">
+                                <option value="" selected>Select status</option>
+                                <option>Pending</option>
+                                <option>Accepted</option>
+                                <option>Declined</option>
+                                <option>Completed</option>
+                            </select>
+                            <p class="fieldError" id="exchangeStatusError1"></p>
+                        </label>
+                        <label>Action
+                            <select id="exchangeAction1" name="exchange-action">
+                                <option value="" selected>Select action</option>
+                                <option>View request</option>
+                                <option>Contact student</option>
+                            </select>
+                            <p class="fieldError" id="exchangeActionError1"></p>
+                        </label>
+                        <div class="requestButtons">
+                            <div class="updateLabel">Update</div>
+                            <div>
+                                <button type="button" onclick="validate_exchange1()">Save</button>
+                                <button type="button" class="resetButton" onclick="reset_exchange1()">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="requestCard">
+                    <div class="requestDetails">
+                        <img src="../images/WirelessEarbuds.jpg" alt="Wireless Earbuds">
+                        <div>
+                            <h3>Wireless Earbuds</h3>
+                            <p>Request type: Buy</p>
+                            <p>Requested by: Nusrat</p>
+                            <p>Offer: Tk 1,200</p>
+                            <p>Request date: Today</p>
+                        </div>
+                    </div>
+                    <div class="requestControls">
+                        <label>Status
+                            <select id="exchangeStatus2" name="exchange-status">
+                                <option value="" selected>Select status</option>
+                                <option>Pending</option>
+                                <option>Accepted</option>
+                                <option>Declined</option>
+                                <option>Completed</option>
+                            </select>
+                            <p class="fieldError" id="exchangeStatusError2"></p>
+                        </label>
+                        <label>Action
+                            <select id="exchangeAction2" name="exchange-action">
+                                <option value="" selected>Select action</option>
+                                <option>View request</option>
+                                <option>Contact student</option>
+                            </select>
+                            <p class="fieldError" id="exchangeActionError2"></p>
+                        </label>
+                        <div class="requestButtons">
+                            <div class="updateLabel">Update</div>
+                            <div>
+                                <button type="button" onclick="validate_exchange2()">Save</button>
+                                <button type="button" class="resetButton" onclick="reset_exchange2()">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="requestCard">
+                    <div class="requestDetails">
+                        <img src="../images/Cycle Helmet.jpg" alt="Cycle Helmet">
+                        <div>
+                            <h3>Cycle Helmet</h3>
+                            <p>Request type: Exchange</p>
+                            <p>Requested by: Samin</p>
+                            <p>Offer: Sports Bag</p>
+                            <p>Request date: 2 days ago</p>
+                        </div>
+                    </div>
+                    <div class="requestControls">
+                        <label>Status
+                            <select id="exchangeStatus3" name="exchange-status">
+                                <option value="" selected>Select status</option>
+                                <option>Pending</option>
+                                <option>Accepted</option>
+                                <option>Declined</option>
+                                <option>Completed</option>
+                            </select>
+                            <p class="fieldError" id="exchangeStatusError3"></p>
+                        </label>
+                        <label>Action
+                            <select id="exchangeAction3" name="exchange-action">
+                                <option value="" selected>Select action</option>
+                                <option>View request</option>
+                                <option>Contact student</option>
+                            </select>
+                            <p class="fieldError" id="exchangeActionError3"></p>
+                        </label>
+                        <div class="requestButtons">
+                            <div class="updateLabel">Update</div>
+                            <div>
+                                <button type="button" onclick="validate_exchange3()">Save</button>
+                                <button type="button" class="resetButton" onclick="reset_exchange3()">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
 
     <footer class="pageFooter">
         <p>&copy; 2026 PabeKothay. All rights reserved.</p>
