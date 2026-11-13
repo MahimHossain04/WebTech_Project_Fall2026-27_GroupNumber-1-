@@ -164,19 +164,31 @@ function validateConfirmPassword() {
 }
 
 function validate_login() {
-    validateEmail();
-    let password = document.getElementById("password").value;
-    let error = document.getElementById("passwordError");
+    const email = document.getElementById("workEmail").value.trim();
+    const password = document.getElementById("password").value;
+    const emailError = document.getElementById("workEmailError");
+    const passwordError = document.getElementById("passwordError");
 
-    if (password === "") {
-        error.textContent = "Enter your password.";
-    } else if (password.length < 8) {
-        error.textContent = "Password must be at least 8 characters.";
-    } else {
-        error.textContent = "";
+    if (email === "") {
+        emailError.textContent = "Please enter your email.";
+        passwordError.textContent = "";
+        return false;
     }
 
+    if (password === "") {
+        emailError.textContent = "";
+        passwordError.textContent = "Please enter your password.";
+        return false;
+    }
+
+    emailError.textContent = "";
+    passwordError.textContent = "";
+
+    if (email === "customer@pb.com" && password === "1234") {
+        window.location.href = "Dashboard_staff.html";
+        return false;
+    }
+
+    passwordError.textContent = "Email or password is incorrect.";
     return false;
 }
-
-// Marketplace_Management_staff er code
