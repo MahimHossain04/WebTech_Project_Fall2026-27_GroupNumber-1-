@@ -501,17 +501,6 @@ body {
     background: #0b5a46;
 }
 
-.accessRequestsPage button.accessResetButton {
-    margin-left: 6px;
-    background: #ffffff;
-    color: #38564e;
-    border: 1px solid #cbdcd5;
-}
-
-.accessRequestsPage button.accessResetButton:hover {
-    background: #f4f8f6;
-}
-
 .pendingApprovalsPage > div > p:last-child {
     margin-top: 16px;
     color: #71817d;
