@@ -748,39 +748,8 @@ body.marketplacePage .sectionHeading h2 {
     border-radius: 7px;
     background-color: #ffffff;
 }
-
-.cardControls > div,
-.requestControls > div {
-    display: flex;
-    flex-shrink: 0;
-    gap: 5px;
-}
-
-body.marketplacePage button {
-    padding: 8px 11px;
-    border: 1px solid #08775e;
-    border-radius: 6px;
-    background-color: #08775e;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-body.marketplacePage button.resetButton {
-    border-color: #c7d8d7;
-    background-color: #ffffff;
-    color: #17423b;
-}
-
-.marketplacePage label > .fieldError {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    margin: 3px 0 0;
-    color: #b42318;
-    font-size: 11px;
-    white-space: nowrap;
-}
-
-.marketplacePage .fieldError:empty {
-    display: none;
+.cardControls button,
+.requestControls button {
+    position: relative;
+    top: -5px;
 }
