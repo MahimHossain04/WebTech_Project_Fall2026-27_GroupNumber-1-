@@ -46,11 +46,17 @@ function connect_data1(){
     let validUsername = usernameValidation();
     let validPassword = passwordValidation();
     let validConfirmPassword = confirmPasswordValidation();
-    
+    if(validName && validEmail && validStudentId && validDepartment && 
+       validPhone && validLocation && validUsername && validPassword && validConfirmPassword) {
+        window.location.href = "StudentLogin.html";
+        return false;
+    } else {
+        return false;
+    }
 }
 function fullNameValidation()
 {
-    let Name = document.getElementById("name").value;
+    let Name = document.getElementById("fullname").value;
     let NameError = document.getElementById("name-error");
     if(Name === "")
     {
