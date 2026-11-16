@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Manage Users | PabeKothay</title>
+        <link rel="stylesheet" href="../Design/style1.css">
+        <script src="../Script/AdminManageUsers.js" defer></script>
+        </head>
+    <body id="users">
+        <div class="hdr">
+            <img src="pabekothay logo 1.jpeg" id="logo">
+            <h2>PabeKothay </h2>
+            <p class="tag">Find what you need, share what you have</p>
+            <p class="port">Admin Portal</p>
+            </div>
+            <div class="side">
+                <a href="AdminDashboard.html">Dashboard</a>
+                <a href="AdminManageUsers.html">Users</a>
+                <a href="AdminManagePosts.html">Posts</a>
+                <a href="AdminManageRequests.html">Requests</a>
+                <a href="AdminSettings.html">Settings</a>
+                <a class="out" href="AdminLogin.html">Log out</a>
+            
+            </div>
+            <div class="box">
+                <h1>Manage Users</h1>
+                <p>Search and manage user accounts</p>
+
+                <form class="srch" method="get">
+                    <input type="text" name="search" placeholder="Search by name or ID">
+                    <input type="submit" value="Search">
+                </form>
+
+                <div class="bulk">
+                    <label for="bulkAction">Bulk action</label>
+                    <select id="bulkAction">
+                        <option value="">Choose action</option>
+                        <option value="change-status">Change Status</option>
+                        <option value="activate">Activate</option>
+                        <option value="deactivate">Deactivate</option>
+                        <option value="change-user-type">Change User Type</option>
+                    </select>
+
+                    <label for="bulkStatus">Status</label>
+                    <select id="bulkStatus">
+                        <option value="">Select status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+
+                    <label for="bulkUserType">User type</label>
+                    <select id="bulkUserType">
+                        <option value="">Select user type</option>
+                        <option value="student">Student</option>
+                        <option value="delivery-man">Delivery Man</option>
+                        <option value="admin">Admin</option>
+                    </select>
+
+                    <button id="applyBulkAction" type="button">Apply</button>
+                </div>
+
+                <div class="wrap">
+                    <table class="utable">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>User ID</th>
+                                <th>Department</th>
+                                <th>User Type</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input class="urow" type="checkbox">
+                                    Fabliha Tahsin
+                                </td>
+                                <td>24-56556-1</td>
+                                <td>CSE</td>
+                                <td>
+                                    <select id="userType1" class="utype">
+                                        <option value="" selected>Select user type</option>
+                                        <option value="student">Student</option>
+                                        <option value="delivery-man">Delivery Man</option>
+                                        <option value="admin">Admin</option>
+                                    </select>
+                                    <p id="userTypeErr1"></p>
+                                </td>
+                                <td>
+                                    <select id="userStatus1" class="ustat">
+                                        <option value="" selected>Select status</option>
+                                        <option value="active">Active</option>
+                                        <option value="inactive">Inactive</option>
+                                    </select>
+                                    <p id="userStatusErr1"></p>
+                                </td>
+                                <td>
+                                    <button class="upd" type="button" onclick="validate_data('userStatus1', 'userType1', 'userStatusErr1', 'userTypeErr1')">Update</button>
+                                    <button class="del" type="button">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="urow" type="checkbox">
+                                    Demo User 2
+                                </td>
+                                <td>DEMO-002</td>
+                                <td>BBA</td>
+                                <td>
+                                    <select id="userType2" class="utype">
+                                        <option value="" selected>Select user type</option>
+                                        <option value="student">Student</option>
+                                        <option value="delivery-man">Delivery Man</option>
+                                        <option value="admin">Admin</option>
+                                    </select>
+                                    <p id="userTypeErr2"></p>
+                                </td>
+                                <td>
+                                    <select id="userStatus2" class="ustat">
+                                        <option value="" selected>Select status</option>
+                                        <option value="active">Active</option>
+                                        <option value="inactive">Inactive</option>
+                                    </select>
+                                    <p id="userStatusErr2"></p>
+                                </td>
+                                <td>
+                                    <button class="upd" type="button" onclick="validate_data('userStatus2', 'userType2', 'userStatusErr2', 'userTypeErr2')">Update</button>
+                                    <button class="del" type="button">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="urow" type="checkbox">
+                                    Demo User 3
+                                </td>
+                                <td>DEMO-003</td>
+                                <td>EEE</td>
+                                <td>
+                                    <select id="userType3" class="utype">
+                                        <option value="" selected>Select user type</option>
+                                        <option value="student">Student</option>
+                                        <option value="delivery-man">Delivery Man</option>
+                                        <option value="admin">Admin</option>
+                                    </select>
+                                    <p id="userTypeErr3"></p>
+                                </td>
+                                <td>
+                                    <select id="userStatus3" class="ustat">
+                                        <option value="" selected>Select status</option>
+                                        <option value="active">Active</option>
+                                        <option value="inactive">Inactive</option>
+                                    </select>
+                                    <p id="userStatusErr3"></p>
+                                </td>
+                                <td>
+                                    <button class="upd" type="button" onclick="validate_data('userStatus3', 'userType3', 'userStatusErr3', 'userTypeErr3')">Update</button>
+                                    <button class="del" type="button">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Select users to apply a bulk action, or edit a user's type or status and click Update.</p>
+
+            </div>
+            <footer class="small-footer">© 2026 PabeKothay. All rights reserved.</footer>
+    </body>
+</html>

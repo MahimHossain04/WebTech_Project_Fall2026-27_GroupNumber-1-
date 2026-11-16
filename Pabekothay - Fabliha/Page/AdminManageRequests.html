@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Manage Requests | PabeKothay</title>
+        <link rel="stylesheet" href="../Design/style1.css">
+        <script src="../Script/AdminManageRequests.js" defer></script>
+        </head>
+    <body id="req">
+        <div class="hdr">
+            <img src="pabekothay logo 1.jpeg" id="logo">
+            <h2>PabeKothay </h2>
+            <p class="tag">Find what you need, share what you have</p>
+            <p class="port">Admin Portal</p>
+            </div>
+            <div class="side">
+                <a href="AdminDashboard.html">Dashboard</a>
+                <a href="AdminManageUsers.html">Users</a>
+                <a href="AdminManagePosts.html">Posts</a>
+                <a href="AdminManageRequests.html">Requests</a>
+                <a href="AdminSettings.html">Settings</a>
+                <a class="out" href="AdminLogin.html">Log out</a>
+            </div> 
+            <div class="box">
+        <h1>Manage Requests</h1>
+        <p>Review buy and exchange requests</p>
+
+        <form class="rfilter" method="get">
+            <select name="type">
+                <option value="">All Requests</option>
+                <option value="buy">Buy Requests</option>
+                <option value="exchange">Exchange Requests</option>
+            </select>
+
+            <select name="status">
+                <option value="">All statuses</option>
+                <option value="pending">Pending</option>
+                <option value="approved">Approved</option>
+                <option value="completed">Completed</option>
+                <option value="rejected">Rejected</option>
+            </select>
+
+            <input type="submit" value="Filter">
+        </form>
+
+        <table class="rtable">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Requester</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Engineering Book</td>
+                    <td>Mahabubur Rahman</td>
+                    <td>
+                        <select id="reqType1">
+                            <option value="" selected>Select request type</option>
+                            <option value="buy">Buy</option>
+                            <option value="exchange">Exchange</option>
+                        </select>
+                        <p id="reqTypeErr1"></p>
+                    </td>
+                    <td>
+                        <select id="reqStatus1">
+                            <option value="" selected>Select status</option>
+                            <option value="pending">Pending</option>
+                            <option value="approved">Approved</option>
+                            <option value="completed">Completed</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                        <p id="reqStatusErr1"></p>
+                    </td>
+                    <td><button class="upd" type="button" onclick="validate_data('reqStatus1', 'reqType1', 'reqStatusErr1', 'reqTypeErr1')">Update</button></td>
+                </tr>
+                <tr>
+                    <td>Arduino Lab Kit</td>
+                    <td>Mahim Khan</td>
+                    <td>
+                        <select id="reqType2">
+                            <option value="" selected>Select request type</option>
+                            <option value="buy">Buy</option>
+                            <option value="exchange">Exchange</option>
+                        </select>
+                        <p id="reqTypeErr2"></p>
+                    </td>
+                    <td>
+                        <select id="reqStatus2">
+                            <option value="" selected>Select status</option>
+                            <option value="pending">Pending</option>
+                            <option value="approved">Approved</option>
+                            <option value="completed">Completed</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                        <p id="reqStatusErr2"></p>
+                    </td>
+                    <td><button class="upd" type="button" onclick="validate_data('reqStatus2', 'reqType2', 'reqStatusErr2', 'reqTypeErr2')">Update</button></td>
+                </tr>
+                <tr>
+                    <td>Calculator</td>
+                    <td>Tushar Ahmed</td>
+                    <td>
+                        <select id="reqType3">
+                            <option value="" selected>Select request type</option>
+                            <option value="buy">Buy</option>
+                            <option value="exchange">Exchange</option>
+                        </select>
+                        <p id="reqTypeErr3"></p>
+                    </td>
+                    <td>
+                        <select id="reqStatus3">
+                            <option value="" selected>Select status</option>
+                            <option value="pending">Pending</option>
+                            <option value="approved">Approved</option>
+                            <option value="completed">Completed</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                        <p id="reqStatusErr3"></p>
+                    </td>
+                    <td><button class="upd" type="button" onclick="validate_data('reqStatus3', 'reqType3', 'reqStatusErr3', 'reqTypeErr3')">Update</button></td>
+                </tr>
+                <tr>
+                    <td>Backpack</td>
+                    <td>Rikti Ahmed</td>
+                    <td>
+                        <select id="reqType4">
+                            <option value="" selected>Select request type</option>
+                            <option value="buy">Buy</option>
+                            <option value="exchange">Exchange</option>
+                        </select>
+                        <p id="reqTypeErr4"></p>
+                    </td>
+                    <td>
+                        <select id="reqStatus4">
+                            <option value="" selected>Select status</option>
+                            <option value="pending">Pending</option>
+                            <option value="approved">Approved</option>
+                            <option value="completed">Completed</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                        <p id="reqStatusErr4"></p>
+                    </td>
+                    <td><button class="upd" type="button" onclick="validate_data('reqStatus4', 'reqType4', 'reqStatusErr4', 'reqTypeErr4')">Update</button></td>
+                </tr>
+                <tr>
+                    <td>Lab Coat</td>
+                    <td>Fabliha Tahsin</td>
+                    <td>
+                        <select id="reqType5">
+                            <option value="" selected>Select request type</option>
+                            <option value="buy">Buy</option>
+                            <option value="exchange">Exchange</option>
+                        </select>
+                        <p id="reqTypeErr5"></p>
+                    </td>
+                    <td>
+                        <select id="reqStatus5">
+                            <option value="" selected>Select status</option>
+                            <option value="pending">Pending</option>
+                            <option value="approved">Approved</option>
+                            <option value="completed">Completed</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                        <p id="reqStatusErr5"></p>
+                    </td>
+                    <td><button class="upd" type="button" onclick="validate_data('reqStatus5', 'reqType5', 'reqStatusErr5', 'reqTypeErr5')">Update</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Open a request to review its details and update its status.</p>
+    </div>
+    <footer class="small-footer">© 2026 PabeKothay. All rights reserved.</footer>
+</body>
+</html>
