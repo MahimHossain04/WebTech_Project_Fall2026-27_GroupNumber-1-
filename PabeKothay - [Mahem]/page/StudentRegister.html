@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../design/Student.css">
+    <title>Student Registration - PabeKothay</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="../image/pabekothay logo 1.jpeg" alt="PabeKothay Logo" id="logo">
+            <h1>PabeKothay</h1>
+        </div>
+    </header>
+
+    <main class="register-container">
+        <div class="page-header">
+            <h1>Student Registration</h1>
+            <p>Register once with university details. The same account is used for both buying and selling.</p>
+        </div>
+
+        <div class="form-card">
+            <h2>Student Registration</h2>
+            <form>
+                <table class="form-table">
+                    <tr>
+                        <td>
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" name="fullname" required>
+                        </td>
+                        <td>
+                            <label for="email">University Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="studentid">Student ID</label>
+                            <input type="text" id="studentid" name="studentid" required>
+                        </td>
+                        <td>
+                            <label for="department">Department</label>
+                            <input type="text" id="department" name="department" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </td>
+                        <td>
+                            <label for="location">Location</label>
+                            <input type="text" id="location" name="location" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" required>
+                        </td>
+                        <td>
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="confirm_password">Confirm Password</label>
+                            <input type="password" id="confirm_password" name="confirm_password" required>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary" href="StudentLogin.html">Create Account</button>
+                    <span class="action-links">
+                        <a href="StudentLogin.html">Already registered? Log in</a> 
+                    </span>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PabeKothay. All rights reserved.</p>
+    </footer>
+</body>
+</html>

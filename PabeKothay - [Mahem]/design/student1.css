@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f8f7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0 30px;
+    height: 70px;
+    border-bottom: 1px solid #dcdcdc;
+    flex-shrink: 0;
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header img {
+    height: 40px; 
+    width: auto;
+}
+
+header h1, header strong {
+    font-size: 22px;
+    color: #111;
+    font-weight: 700;
+}
+
+header span {
+    font-size: 14px;
+    color: #666;
+}
+
+hr {
+    display: none;
+}
+
+body > div {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+nav {
+    width: 250px;
+    background-color: #f8fbfa;
+    border-right: 1px solid #dcdcdc;
+    padding: 20px 15px;
+    flex-shrink: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav a {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #157a5c;
+    background-color: #e6f2ee;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+nav a:hover {
+    background-color: #dcece7;
+}
+
+nav a.active {
+    background-color: #157a5c;
+    color: #ffffff;
+}
+
+main {
+    flex: 1;
+    padding: 30px 40px;
+    overflow-y: auto;
+    background-color: #f4f8f7;
+}
+
+main h1 {
+    color: #157a5c;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+main p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #dcdcdc; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+th {
+    background-color: #e6f2ee;
+    color: #157a5c;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 14px;
+    color: #333;
+}
+
+td a {
+    color: #157a5c;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+td a:hover {
+    text-decoration: underline;
+    color: #d85a30;
+}
