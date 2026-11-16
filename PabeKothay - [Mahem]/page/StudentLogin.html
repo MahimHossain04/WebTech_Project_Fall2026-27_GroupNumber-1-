@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../design/Student.css">
+    <script src="../js/student-validation.js"></script>
     <title>Student Login - PabeKothay</title>
 </head>
 <body>
@@ -16,20 +17,22 @@
             <h1>Student Login</h1>
             <p>Sign in to the Student portal to access marketplace and selling tools.</p>
         </div>
-    <form>
+    <form onsubmit="return connect_data()">
         <table>
             <tr>
                 <td><label for="suname">Username:</label></td>
-                <td><input type="text" id="suname" name="suname" required></td>
+                <td><input type="text" id="suname" name="suname">
+                <p id="uname-error" class="error"></p></td>
             </tr>
             <tr>
                 <td><label for="spass">Password:</label></td>
-                <td><input type="password" id="spass" name="spass" required></td>
+                <td><input type="password" id="spass" name="spass">
+                <p id="pass-error" class="error"></p></td>
             </tr>
         </table>
         <br>
         <div class="form-actions">
-                    <button type="submit" class="btn-primary" href="Marketplace.html">Log In</button>
+                    <button type="submit" class="btn-primary">Log In</button>
                     <span class="action-links">
                         <a href="#">Forgot password?</a> 
                         <a href="../page/StudentRegister.html">Create account</a>
