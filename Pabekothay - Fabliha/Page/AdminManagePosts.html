@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Manage Posts | PabeKothay</title>
+        <link rel="stylesheet" href="../Design/style1.css">
+        <script src="../Script/AdminManagePosts.js" defer></script>
+        </head>
+    <body id="posts">
+        <div class="hdr">
+            <img src="pabekothay logo 1.jpeg" id="logo">
+            <h2>PabeKothay </h2>
+            <p class="tag">Find what you need, share what you have</p>
+            <p class="port">Admin Portal</p>
+            </div>
+            <div class="side">
+                <a href="AdminDashboard.html">Dashboard</a>
+                <a href="AdminManageUsers.html">Users</a>
+                <a href="AdminManagePosts.html">Posts</a>
+                <a href="AdminManageRequests.html">Requests</a>
+                <a href="AdminSettings.html">Settings</a>
+                <a class="out" href="AdminLogin.html">Log out</a>
+            </div>
+            <div class="box">
+                <h1>Manage Posts</h1>
+                <p>Review marketplace listings and availability</p>
+                <form>
+                    <input type="text" name="search" placeholder="Search items...">
+                    <select name="category">
+                        <option value="">All categories</option>
+                        <option value="Books">Books</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Accessories">Accessories</option>
+                        <option value="Others">Others</option>
+                        </select>
+
+                        <select id="postFilterStatus" name="status">
+                            <option value="" selected>All statuses</option>
+                            <option value="active">Active</option>
+                            <option value="pending">Pending</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                        <p id="postFilterStatusErr"></p>
+
+                        <input type="submit" value="Search">
+                        </form>
+                        <div class="bulk pbulk">
+                            <label for="selectAllPosts">Select All</label>
+                            <input id="selectAllPosts" type="checkbox">
+
+                            <label for="postBulkAction">Bulk action</label>
+                            <select id="postBulkAction" name="bulkAction">
+                                <option value="" selected>Choose action</option>
+                                <option value="active">Active</option>
+                                <option value="pending">Pending</option>
+                                <option value="rejected">Rejected</option>
+                            </select>
+                            <p id="postBulkActionErr"></p>
+                            <button type="button" onclick="validate_data('postFilterStatus', 'postBulkAction', 'postFilterStatusErr', 'postBulkActionErr')">Apply</button>
+                            <button type="button" onclick="reset_data('postFilterStatus', 'postBulkAction', 'postFilterStatusErr', 'postBulkActionErr')">Reset</button>
+                        </div>
+
+                        <div class="wrap">
+                            <table class="utable ptable">
+                                <thead>
+                                    <tr>
+                                        <th>Post</th>
+                                        <th>Owner</th>
+                                        <th>Category</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input class="prow" type="checkbox">
+                                            Engineering Book
+                                        </td>
+                                        <td>Mahim Khan</td>
+                                        <td>Books</td>
+                                        <td>
+                                            <select id="postStatus1">
+                                                <option value="" selected>Select status</option>
+                                                <option value="active">Active</option>
+                                                <option value="pending">Pending</option>
+                                                <option value="rejected">Rejected</option>
+                                            </select>
+                                            <p id="postStatusErr1"></p>
+                                        </td>
+                                        <td>
+                                            <button class="upd" type="button" onclick="validate_post_status('postStatus1', 'postStatusErr1')">Update</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="prow" type="checkbox">
+                                            Arduino Lab Kit
+                                        </td>
+                                        <td>Rikti Ahmed</td>
+                                        <td>Lab kits</td>
+                                        <td>
+                                            <select id="postStatus2">
+                                                <option value="" selected>Select status</option>
+                                                <option value="active">Active</option>
+                                                <option value="pending">Pending</option>
+                                                <option value="rejected">Rejected</option>
+                                            </select>
+                                            <p id="postStatusErr2"></p>
+                                        </td>
+                                        <td>
+                                            <button class="upd" type="button" onclick="validate_post_status('postStatus2', 'postStatusErr2')">Update</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="prow" type="checkbox">
+                                            Chemistry Lab Apron
+                                        </td>
+                                        <td>Fabliha Tahsin</td>
+                                        <td>Accessories</td>
+                                        <td>
+                                            <select id="postStatus3">
+                                                <option value="" selected>Select status</option>
+                                                <option value="active">Active</option>
+                                                <option value="pending">Pending</option>
+                                                <option value="rejected">Rejected</option>
+                                            </select>
+                                            <p id="postStatusErr3"></p>
+                                        </td>
+                                        <td>
+                                            <button class="upd" type="button" onclick="validate_post_status('postStatus3', 'postStatusErr3')">Update</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Select posts to apply a bulk action, or choose a status and click Update for an individual post.</p>
+
+
+            </div>
+            <footer class="small-footer">© 2026 PabeKothay. All rights reserved.</footer>
+            </body>
+            </html> 
