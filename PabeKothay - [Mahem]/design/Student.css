@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-p{
-    color: red;
-    text-align: center;
-}
-
 body{
     background-color: #f0f4f3;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
