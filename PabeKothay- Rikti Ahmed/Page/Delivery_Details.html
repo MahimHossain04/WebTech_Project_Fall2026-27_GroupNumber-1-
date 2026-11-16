@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Details | PabeKothay</title>
+    <link rel="stylesheet" href="../Design/style.css">
+</head>
+<body class="dashboard">
+    <header class="header">
+        <a class="brand" href="../index.html">
+            <img class="logo" src="../icons/pabekothay_icon_only.svg" alt="">
+            <p class="name">PabeKothay</p>
+        </a>
+        <p class="portal">Delivery Man Portal</p>
+    </header>
+
+    <nav>
+        <a href="Dashboard_Delivery.html">Dashboard</a>
+        <a href="My_Deliveries.html">Delivery</a>
+        <a class="active" href="Delivery_Details.html">Delivery Details</a>
+        <a class="logout" href="../index.html">Log out</a>
+    </nav>
+
+    <div>
+        <div class="intro">
+            <h1>Delivery Details</h1>
+            <p>View the details and update the status of this delivery.</p>
+        </div>
+
+        <div class="info">
+            <h2>Delivery Information</h2>
+
+            <div class="details">
+                <div class="detail">
+                    <p>Delivery ID</p>
+                    <h3>1001</h3>
+                </div>
+                <div class="detail">
+                    <p>Product Name</p>
+                    <h3>Books</h3>
+                </div>
+                <div class="detail">
+                    <p>Customer Name</p>
+                    <h3>Sample Customer</h3>
+                </div>
+                <div class="detail">
+                    <p>Contact Number</p>
+                    <h3>01XXXXXXXXX</h3>
+                </div>
+                <div class="detail">
+                    <p>Pickup Location</p>
+                    <h3>Example Bookshop</h3>
+                </div>
+                <div class="detail">
+                    <p>Delivery Location</p>
+                    <h3>Example Hall</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="state">
+            <h2>Update Delivery Status</h2>
+
+            <div class="current">
+                <p>Current Status</p>
+                <h3 id="current-status">Pending Pickup</h3>
+            </div>
+
+            <div class="choice">
+                <label for="new-status">Choose New Status</label>
+                <select id="new-status">
+                    <option value="">Select delivery status</option>
+                    <option value="Pending Pickup">Pending Pickup</option>
+                    <option value="Picked Up">Picked Up</option>
+                    <option value="In Transit">In Transit</option>
+                    <option value="Delivered">Delivered</option>
+                </select>
+                <p class="error" id="status-error"></p>
+            </div>
+
+            <button class="update" type="button" onclick="change_status()">Update Status</button>
+            <a class="back" href="My_Deliveries.html">Back to My Deliveries</a>
+        </div>
+
+        <div class="info">
+            <h2>Payment Information</h2>
+            <div class="details">
+                <div class="detail">
+                    <p>Payment Method</p>
+                    <h3>Cash on Delivery (COD)</h3>
+                </div>
+                <div class="detail">
+                    <p>Delivery Fee</p>
+                    <h3>&#2547;100</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 PabeKothay. All rights reserved.</p>
+        <p>Find what you need, share what you have.</p>
+    </footer>
+
+    <script src="../Script/delivery_details.js"></script>
+</body>
+</html>
