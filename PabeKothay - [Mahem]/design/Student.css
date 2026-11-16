@@ -123,12 +123,6 @@ form table.form-table td:nth-child(even){
     padding-left: 15px;
 }
 
-form table.form-table td[colspan="2"]{
-    width: 50%;
-    padding-right: 15px;
-    padding-left: 0;
-}
-
 .login-container form table{
     width: 100%;
     border-collapse: collapse;

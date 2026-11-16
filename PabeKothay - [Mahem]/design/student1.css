@@ -45,6 +45,7 @@ header h1, header strong {
 header span {
     font-size: 14px;
     color: #666;
+    text-decoration: none;
 }
 
 body > div {
