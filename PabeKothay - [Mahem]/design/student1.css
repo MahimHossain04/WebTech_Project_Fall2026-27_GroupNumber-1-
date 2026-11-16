@@ -47,10 +47,6 @@ header span {
     color: #666;
 }
 
-hr {
-    display: none;
-}
-
 body > div {
     display: flex;
     flex: 1;
