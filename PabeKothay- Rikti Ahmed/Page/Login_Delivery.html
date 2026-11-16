@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Man Login | PabeKothay</title>
+    <link rel="stylesheet" href="../Design/style.css">
+</head>
+<body class="page">
+    <div class="container">
+        <header class="header">
+            <a class="brand" href="../index.html">
+                <img class="logo" src="../icons/pabekothay_icon_only.svg" alt="">
+                <p class="name">PabeKothay</p>
+            </a>
+            <p class="portal">Delivery Man Portal</p>
+
+        </header>
+
+        <div class="intro">
+            <h1>Delivery Man Login</h1>
+            <p>Log in to view and manage your delivery assignments.</p>
+        </div>
+
+        <div class="form-box">
+            <h2>Login to your account</h2>
+
+            <form class="form one-col" onsubmit="login_delivery(); return false;">
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+
+                <label for="show-password">
+                    <input type="checkbox" id="show-password" onclick="show_password()">
+                    Show password
+                </label>
+
+                <p class="error" id="login-error"></p>
+
+                <div class="actions">
+                    <button class="btn green-btn" type="submit">Login</button>
+                    <a class="link" href="Registration_Delivery.html">Don't have an account? Register here</a>
+                </div>
+            </form>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 PabeKothay. All rights reserved.</p>
+            <p>Find what you need, share what you have.</p>
+        </footer>
+    </div>
+
+    <script src="../Script/delivery_login.js"></script>
+</body>
+</html>

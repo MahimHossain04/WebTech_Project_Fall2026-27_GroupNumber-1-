@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Man Dashboard | PabeKothay</title>
+    <link rel="stylesheet" href="../Design/style.css">
+</head>
+<body class="dashboard">
+    <header class="header">
+        <a class="brand" href="../index.html">
+            <img class="logo" src="../icons/pabekothay_icon_only.svg" alt="">
+            <p class="name">PabeKothay</p>
+        </a>
+        <p class="portal">Delivery Man Portal</p>
+    </header>
+
+    <nav>
+        <a class="active" href="#overview">Dashboard</a>
+        <a href="My_Deliveries.html">Delivery</a>
+        <a href="Delivery_Details.html">Delivery Details</a>
+        <a class="logout" href="../index.html">Log out</a>
+    </nav>
+
+    <div>
+        <h1 id="overview">Delivery Dashboard</h1>
+        <p>View your delivery assignments and their current status.</p>
+
+        <div class="cards">
+            <div>
+                <h2>Assigned Deliveries</h2>
+                <p id="assigned-count">2</p>
+            </div>
+            <div>
+                <h2>Pending Pickup</h2>
+                <p id="pending-count">1</p>
+            </div>
+            <div>
+                <h2>Completed Deliveries</h2>
+                <p id="completed-count">0</p>
+            </div>
+            <div>
+                <h2>Total Earnings</h2>
+                <p id="earnings-count">&#2547;0</p>
+            </div>
+        </div>
+
+        <div class="panel" id="deliveries">
+            <h2>My Deliveries</h2>
+            <p>Sample deliveries are shown here to demonstrate status updates.</p>
+            <table id="delivery-table">
+                <thead>
+                    <tr>
+                        <th>Delivery ID</th>
+                        <th>Pickup Location</th>
+                        <th>Delivery Location</th>
+                        <th>Assigned Date</th>
+                        <th>Status</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="id">1001</td>
+                        <td>Example Pickup Location</td>
+                        <td>Example Delivery Location</td>
+                        <td>Sample</td>
+                        <td class="status-text">Pending Pickup</td>
+                        <td><a class="btn green-btn" href="Delivery_Details.html">Delivery Details</a></td>
+                    </tr>
+                    <tr>
+                        <td class="id">1002</td>
+                        <td>Example Pickup Location</td>
+                        <td>Example Delivery Location</td>
+                        <td>Sample</td>
+                        <td class="status-text">In Transit</td>
+                        <td><a class="btn green-btn" href="Delivery_Details.html">Delivery Details</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 PabeKothay. All rights reserved.</p>
+        <p>Find what you need, share what you have.</p>
+    </footer>
+    <script src="../Script/dashboard_delivery.js"></script>
+</body>
+</html>

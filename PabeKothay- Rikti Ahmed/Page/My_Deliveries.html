@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Deliveries | PabeKothay</title>
+    <link rel="stylesheet" href="../Design/style.css">
+</head>
+<body class="dashboard">
+    <header class="header">
+        <a class="brand" href="../index.html">
+            <img class="logo" src="../icons/pabekothay_icon_only.svg" alt="">
+            <p class="name">PabeKothay</p>
+        </a>
+        <p class="portal">Delivery Man Portal</p>
+    </header>
+
+    <nav>
+        <a href="Dashboard_Delivery.html">Dashboard</a>
+        <a class="active" href="My_Deliveries.html">Delivery</a>
+        <a href="Delivery_Details.html">Delivery Details</a>
+        <a class="logout" href="../index.html">Log out</a>
+    </nav>
+
+    <div>
+        <h1>My Deliveries</h1>
+        <p>Search your assigned deliveries and update their status.</p>
+
+        <div class="panel" id="deliveries">
+            <h2>Delivery List</h2>
+
+            <div class="search-row">
+                <div class="field">
+                    <label for="delivery-search">Search by Delivery ID</label>
+                    <input type="text" id="delivery-search" name="delivery_search">
+                </div>
+                <button class="btn green-btn" type="button" onclick="search_deliveries()">Search</button>
+            </div>
+            <p class="error search-error" id="search-error"></p>
+
+            <table id="delivery-table">
+                <thead>
+                    <tr>
+                        <th>Delivery ID</th>
+                        <th>Product Name</th>
+                        <th>Pickup Location</th>
+                        <th>Delivery Location</th>
+                        <th>Assigned Date</th>
+                        <th>Status</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row">
+                        <td class="id">1001</td>
+                        <td>Books</td>
+                        <td>Example Bookshop</td>
+                        <td>Example Hall</td>
+                        <td>2026-11-01</td>
+                        <td>
+                            <select id="status-choice-1">
+                                <option value="" selected>Choose status</option>
+                                <option value="Pending Pickup">Pending Pickup</option>
+                                <option value="Picked Up">Picked Up</option>
+                                <option value="In Transit">In Transit</option>
+                                <option value="Delivered">Delivered</option>
+                            </select>
+                            <button class="btn green-btn" type="button" onclick="update_status(1)">Update</button>
+                            <p class="error" id="status-error-1"></p>
+                        </td>
+                        <td><a class="btn green-btn" href="Delivery_Details.html">Delivery Details</a></td>
+                    </tr>
+                    <tr class="row">
+                        <td class="id">1002</td>
+                        <td>Notebook</td>
+                        <td>Example Stationery Shop</td>
+                        <td>Example Campus Gate</td>
+                        <td>2026-11-02</td>
+                        <td>
+                            <select id="status-choice-2">
+                                <option value="" selected>Choose status</option>
+                                <option value="Pending Pickup">Pending Pickup</option>
+                                <option value="Picked Up">Picked Up</option>
+                                <option value="In Transit">In Transit</option>
+                                <option value="Delivered">Delivered</option>
+                            </select>
+                            <button class="btn green-btn" type="button" onclick="update_status(2)">Update</button>
+                            <p class="error" id="status-error-2"></p>
+                        </td>
+                        <td><a class="btn green-btn" href="Delivery_Details.html">Delivery Details</a></td>
+                    </tr>
+                    <tr class="row">
+                        <td class="id">1003</td>
+                        <td>Calculator</td>
+                        <td>Example Pickup Point</td>
+                        <td>Example Student Residence</td>
+                        <td>2026-11-03</td>
+                        <td>
+                            <select id="status-choice-3">
+                                <option value="" selected>Choose status</option>
+                                <option value="Pending Pickup">Pending Pickup</option>
+                                <option value="Picked Up">Picked Up</option>
+                                <option value="In Transit">In Transit</option>
+                                <option value="Delivered">Delivered</option>
+                            </select>
+                            <button class="btn green-btn" type="button" onclick="update_status(3)">Update</button>
+                            <p class="error" id="status-error-3"></p>
+                        </td>
+                        <td><a class="btn green-btn" href="Delivery_Details.html">Delivery Details</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 PabeKothay. All rights reserved.</p>
+        <p>Find what you need, share what you have.</p>
+    </footer>
+
+    <script src="../Script/my_deliveries.js"></script>
+</body>
+</html>

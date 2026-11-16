@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Man Registration | PabeKothay</title>
+    <link rel="stylesheet" href="../Design/style.css">
+    <script src="../Script/script.js"></script>
+</head>
+<body class="page">
+    <div class="container">
+        <header class="header">
+            <a class="brand" href="../index.html">
+                <img class="logo" src="../icons/pabekothay_icon_only.svg" alt="">
+                <p class="name">PabeKothay</p>
+            </a>
+            <p class="portal">Delivery Man Portal</p>
+        </header>
+
+        <div class="intro">
+            <h1>Delivery Man Registration</h1>
+            <p>Create your delivery account. Admin approval is required before you can sign in.</p>
+        </div>
+
+        <div class="form-box">
+            <h2>Delivery Staff Access Request</h2>
+
+            <form class="form" id="delivery-register-form" onsubmit="collect_data(); return false;">
+                <div class="field">
+                    <label for="full-name">Full name</label>
+                    <input type="text" id="full-name" name="full_name">
+                    <p class="error" id="full-name-error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="date-of-birth">Date of birth</label>
+                    <input type="date" id="date-of-birth" name="date_of_birth">
+                    <p class="error" id="date-of-birth-error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="" selected disabled>Select gender</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="other">Other</option>
+                        <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+                    <p class="error" id="gender-error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email">
+                    <p class="error" id="email-error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone">
+                    <p class="error" id="phone-error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="address">Present address</label>
+                    <input type="text" id="address" name="address">
+                    <p class="error" id="address-error"></p>
+                </div>
+
+                <fieldset class="field">
+                    <legend>Preferred delivery area</legend>
+                    <select id="delivery-area" name="delivery_area">
+                        <option value="" selected disabled>Select delivery area</option>
+                        <option value="dhaka-south">Dhaka South</option>
+                        <option value="dhaka-north">Dhaka North</option>
+                    </select>
+                    <p class="error" id="delivery-area-error"></p>
+                </fieldset>
+
+                <div class="field">
+                    <label for="vehicle-type">Vehicle type</label>
+                    <select id="vehicle-type" name="vehicle_type">
+                        <option value="" selected disabled>Select vehicle type</option>
+                        <option value="bicycle">Bicycle</option>
+                        <option value="motorcycle">Motorcycle</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <p class="error" id="vehicle-type-error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="identity-number">National ID / Student ID number</label>
+                    <input type="text" id="identity-number" name="identity_number">
+                    <p class="error" id="identity-number-error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="password">Create password</label>
+                    <input type="password" id="password" name="password">
+                    <p class="error" id="password-error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="confirm-password">Confirm password</label>
+                    <input type="password" id="confirm-password" name="confirm_password">
+                    <p class="error" id="confirm-password-error"></p>
+                </div>
+
+                <div class="actions">
+                    <button class="btn green-btn" type="submit">
+                        Create Account
+                    </button>
+                    <a class="link" href="../Page/Login_Delivery.html">Already have an account? Log in</a>
+                </div>
+            </form>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 PabeKothay. All rights reserved.</p>
+            <p>Find what you need, share what you have.</p>
+        </footer>
+    </div>
+</body>
+</html>
