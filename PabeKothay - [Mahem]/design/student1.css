@@ -9,20 +9,20 @@ body {
     background-color: #f4f8f7;
     color: #333;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* up to down */
     height: 100vh;
-    overflow: hidden; 
+    overflow: hidden; /* scroll off */
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
+    display: flex;/* side by side */
+    justify-content: space-between; /* middle space  */
     align-items: center;
     background-color: #ffffff;
     padding: 0 30px;
     height: 70px;
     border-bottom: 1px solid #dcdcdc;
-    flex-shrink: 0;
+    flex-shrink: 0; /* fixed header size */
 }
 
 header > div {
@@ -45,6 +45,10 @@ header h1, header strong {
 header span {
     font-size: 14px;
     color: #666;
+    text-decoration: none;
+}
+#sp1 {
+    color: #157a5c;
     text-decoration: none;
 }
 
